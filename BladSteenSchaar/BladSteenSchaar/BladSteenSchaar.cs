@@ -26,11 +26,11 @@ namespace BladSteenSchaar
         private void BladSteenSchaar_Load(object sender, EventArgs e)
         {
 
-            /*YahtzeeController yController = new YahtzeeController();
+            BladSteenSchaarController bladSteenSchaarController = new BladSteenSchaarController();
 
-            YahtzeeView yahtzeeView = yController.getView();
+            BladSteenSchaarView bladSteenSchaarView = bladSteenSchaarController.getView();
 
-            Controls.Add(yahtzeeView);*/
+            Controls.Add(bladSteenSchaarView);
 
         }
     }

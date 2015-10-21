@@ -46,14 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BladSteenSchaar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BladSteenSchaar.Designer.cs">
+      <DependentUpon>BladSteenSchaar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BladSteenSchaarController.cs" />
+    <Compile Include="BladSteenSchaarModel.cs" />
+    <Compile Include="BladSteenSchaarView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BladSteenSchaarView.Designer.cs">
+      <DependentUpon>BladSteenSchaarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeuzeScoreController.cs" />
+    <Compile Include="KeuzeScoreModel.cs" />
+    <Compile Include="KeuzeScoreView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KeuzeScoreView.Designer.cs">
+      <DependentUpon>KeuzeScoreView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BladSteenSchaar.resx">
+      <DependentUpon>BladSteenSchaar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BladSteenSchaarView.resx">
+      <DependentUpon>BladSteenSchaarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeuzeScoreView.resx">
+      <DependentUpon>KeuzeScoreView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

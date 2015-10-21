@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace BladSteenSchaar
 {
-    class BladSteenSchaarModel
+    public class BladSteenSchaarModel
     {
+
+
+        private string dropdownKeuze;
+
+        public string DropdownKeuze
+        {
+            get
+            {
+                return dropdownKeuze;
+            }
+            set
+            {
+                dropdownKeuze = value;
+            }
+        }
+
+
+
+
     }
 }
