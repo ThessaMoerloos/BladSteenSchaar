@@ -11,7 +11,7 @@ namespace BladSteenSchaar
 
         public BladSteenSchaarModel bladSteenSchaarModel;
         public BladSteenSchaarView bladSteenSchaarView;
-
+        static int seed = 0;
 
 
         public BladSteenSchaarController()
@@ -33,12 +33,38 @@ namespace BladSteenSchaar
         }
 
 
-        public string Computerkeuze()
+        public void Computerkeuze()
         {
 
             string computerkeuze = "";
+            // random object maken
+            Random random = new Random(seed);
 
-            return computerkeuze;
+            //getal berekenen tussen 0 en 2 (0, 1 of 2)
+            int keuzeNummer = random.Next(0, 3);
+
+
+            if (keuzeNummer == 0) {
+                computerkeuze = "blad";
+             }
+
+            if (keuzeNummer == 1)
+            {
+                computerkeuze = "steen";
+            }
+
+            if (keuzeNummer == 2)
+            {
+                computerkeuze = "schaar";
+            }
+
+
+                                                    //string " "
+            bladSteenSchaarModel.ComputerKeuze = computerkeuze;
+
+            seed++;
+
+            Console.WriteLine(computerkeuze);
 
         }
 
