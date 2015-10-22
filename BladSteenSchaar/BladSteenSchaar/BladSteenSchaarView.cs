@@ -42,7 +42,7 @@ namespace BladSteenSchaar
         private void BladSteenSchaarView_Load(object sender, EventArgs e)
         {
 
-            messageLabel.Text = "Je bent de winnaar van dit spel, Speel opnieuw";
+            messageLabel.Text = "Message";
 
 
 
