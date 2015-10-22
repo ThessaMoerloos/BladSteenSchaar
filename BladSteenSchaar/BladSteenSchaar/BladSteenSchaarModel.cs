@@ -11,19 +11,6 @@ namespace BladSteenSchaar
     {
 
         private string computerKeuze;
-        private string dropdownKeuze;
-
-        public string DropdownKeuze
-        {
-            get
-            {
-                return dropdownKeuze;
-            }
-            set
-            {
-                dropdownKeuze = value;
-            }
-        }
 
 
         public string ComputerKeuze

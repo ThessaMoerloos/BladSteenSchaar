@@ -31,7 +31,7 @@
             this.titelSpelerLabel = new System.Windows.Forms.Label();
             this.titelComputerLabel = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dropdown = new System.Windows.Forms.ComboBox();
             this.goButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -68,19 +68,19 @@
             this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
             // 
-            // comboBox1
+            // dropdown
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.dropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dropdown.FormattingEnabled = true;
+            this.dropdown.Items.AddRange(new object[] {
             "Blad",
             "Steen",
             "Schaar"});
-            this.comboBox1.Location = new System.Drawing.Point(30, 274);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.dropdown.Location = new System.Drawing.Point(30, 274);
+            this.dropdown.Name = "dropdown";
+            this.dropdown.Size = new System.Drawing.Size(121, 21);
+            this.dropdown.TabIndex = 3;
+            this.dropdown.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // goButton
             // 
@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.goButton);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dropdown);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.titelComputerLabel);
             this.Controls.Add(this.titelSpelerLabel);
@@ -114,7 +114,7 @@
         private System.Windows.Forms.Label titelSpelerLabel;
         private System.Windows.Forms.Label titelComputerLabel;
         private System.Windows.Forms.Label messageLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox dropdown;
         private System.Windows.Forms.Button goButton;
     }
 }
