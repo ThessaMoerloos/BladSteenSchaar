@@ -19,7 +19,7 @@ namespace BladSteenSchaar
         //lijst om meerdere KeuzeScore's te maken (in ons geval 2)
         public List<KeuzeScoreController> keuzescores = new List<KeuzeScoreController>();
 
-
+       
 
         //constructor
         public BladSteenSchaarView(BladSteenSchaarController controller)
@@ -122,7 +122,9 @@ namespace BladSteenSchaar
 
         private void goButton_Click(object sender, EventArgs e)
         {
+         BladSteenSchaarController controller = new BladSteenSchaarController();
 
+        controller.Computerkeuze();
         }
 
 
