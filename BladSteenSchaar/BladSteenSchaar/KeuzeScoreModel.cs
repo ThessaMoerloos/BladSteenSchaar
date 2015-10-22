@@ -9,7 +9,7 @@ namespace BladSteenSchaar
     public class KeuzeScoreModel
     {
 
-        private int score;
+        private int score = 0;
         private string keuze;
         /*private string achtergrondkleur;*/
 

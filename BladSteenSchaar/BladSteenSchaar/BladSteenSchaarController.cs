@@ -44,7 +44,8 @@ namespace BladSteenSchaar
             int keuzeNummer = random.Next(0, 3);
 
 
-            if (keuzeNummer == 0) {
+            if (keuzeNummer == 0)
+            {
                 computerkeuze = "blad";
              }
 

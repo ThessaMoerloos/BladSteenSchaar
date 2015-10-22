@@ -42,7 +42,7 @@ namespace BladSteenSchaar
         private void BladSteenSchaarView_Load(object sender, EventArgs e)
         {
 
-            messageLabel.Text = "Je bent de winnaar van dit spel, Speel opnieuw";
+            messageLabel.Text = "Message";
 
 
 
@@ -122,9 +122,31 @@ namespace BladSteenSchaar
 
         private void goButton_Click(object sender, EventArgs e)
         {
-         BladSteenSchaarController controller = new BladSteenSchaarController();
 
-        controller.Computerkeuze();
+
+            //de waardes voor in de Keuze variabele in het model van de KeuzeScores ophalen uit de dropdown en de computerkeuze methode
+
+            BladSteenSchaarController controller = new BladSteenSchaarController();
+
+            keuzescores[0].model.Keuze = dropdown.SelectedItem.ToString();
+
+            controller.Computerkeuze();
+
+            keuzescores[1].model.Keuze = controller.bladSteenSchaarModel.ComputerKeuze;
+            
+
+            //om labels te kunnen vullen --> in de view van de KeuzeScores geraken en daar de labels aanspreken
+            KeuzeScoreView viewSpeler = keuzescores[0].getView();
+
+            KeuzeScoreView viewComputer = keuzescores[1].getView();
+
+            viewSpeler.UpdateUI();
+
+            viewComputer.UpdateUI();
+
+
+
+
         }
 
 
