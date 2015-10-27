@@ -46,17 +46,17 @@ namespace BladSteenSchaar
 
             if (keuzeNummer == 0)
             {
-                computerkeuze = "blad";
+                computerkeuze = "Blad";
              }
 
             if (keuzeNummer == 1)
             {
-                computerkeuze = "steen";
+                computerkeuze = "Steen";
             }
 
             if (keuzeNummer == 2)
             {
-                computerkeuze = "schaar";
+                computerkeuze = "Schaar";
             }
 
 
@@ -65,7 +65,7 @@ namespace BladSteenSchaar
 
             seed++;
 
-            Console.WriteLine(computerkeuze);
+            
 
         }
 
