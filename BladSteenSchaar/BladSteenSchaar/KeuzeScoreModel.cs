@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace BladSteenSchaar
 
         private int score = 0;
         private string keuze;
-        /*private string achtergrondkleur;*/
+
 
         public KeuzeScoreModel()
         {
@@ -48,18 +49,7 @@ namespace BladSteenSchaar
 
 
 
-
-        /*public string Achtergrondkleur
-        {
-            get
-            {
-                return achtergrondkleur;
-            }
-            set
-            {
-                achtergrondkleur = value;
-            }
-        }*/
+        
 
 
 

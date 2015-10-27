@@ -19,7 +19,7 @@ namespace BladSteenSchaar
         //lijst om meerdere KeuzeScore's te maken (in ons geval 2)
         public List<KeuzeScoreController> keuzescores = new List<KeuzeScoreController>();
 
-       
+
 
         //constructor
         public BladSteenSchaarView(BladSteenSchaarController controller)
@@ -65,7 +65,7 @@ namespace BladSteenSchaar
             //nu heb je de 2 Keuzescores aangemaakt maar om ze te laten zien -> getView nog doen
             for (int keuzeScoreNummer = 0; keuzeScoreNummer < 2; ++keuzeScoreNummer)
             {
-                
+
                 //controller.getView --> view die gelinkt is aan die controller
                 KeuzeScoreView keuzeScoreView = keuzescores[keuzeScoreNummer].getView();
 
@@ -124,33 +124,219 @@ namespace BladSteenSchaar
         {
 
 
-            //de waardes voor in de Keuze variabele in het model van de KeuzeScores ophalen uit de dropdown en de computerkeuze methode
+            if (dropdown.SelectedItem != null)
 
-            BladSteenSchaarController controller = new BladSteenSchaarController();
+            {//de waardes voor in de Keuze variabele in het model van de KeuzeScores ophalen uit de dropdown en de computerkeuze methode
 
-            keuzescores[0].model.Keuze = dropdown.SelectedItem.ToString();
+                BladSteenSchaarController controller = new BladSteenSchaarController();
 
-            controller.Computerkeuze();
+                // speler keuze
+                keuzescores[0].model.Keuze = dropdown.SelectedItem.ToString();
 
-            keuzescores[1].model.Keuze = controller.bladSteenSchaarModel.ComputerKeuze;
-            
+                controller.Computerkeuze();
 
-            //om labels te kunnen vullen --> in de view van de KeuzeScores geraken en daar de labels aanspreken
-            KeuzeScoreView viewSpeler = keuzescores[0].getView();
+                //computerkeuze
+                keuzescores[1].model.Keuze = controller.bladSteenSchaarModel.ComputerKeuze;
 
-            KeuzeScoreView viewComputer = keuzescores[1].getView();
 
-            viewSpeler.UpdateUI();
 
-            viewComputer.UpdateUI();
+                Console.WriteLine(keuzescores[0].model.Keuze);
+
+
+
+                switch (keuzescores[0].model.Keuze)
+                {
+
+
+                    //spelerkeuze = blad
+                    case "Blad":
+
+                        //computerkeuze = blad
+                        if (keuzescores[1].model.Keuze == "Blad")
+                        {
+
+                            messageLabel.Text = "Gelijk spel. Probeer opnieuw!";
+
+
+                        }
+
+
+                        else if (keuzescores[1].model.Keuze == "Steen")
+                        {
+
+                            messageLabel.Text = "Gefiliciflopstaart! Je hebt deze match gewonnen! Doe zo verder.";
+                            keuzescores[0].model.Score++;
+
+
+                        }
+
+
+
+                        else if (keuzescores[1].model.Keuze == "Schaar")
+                        {
+
+                            messageLabel.Text = "Je hebt deze match verloren, maar je kan wel het spel nog winnen!";
+                            keuzescores[1].model.Score++;
+
+
+                        }
+
+
+
+                        break;
+
+
+
+
+
+
+
+                    case "Steen":
+
+                        if (keuzescores[1].model.Keuze == "Blad")
+                        {
+
+                            messageLabel.Text = "Je hebt deze match verloren, maar je kan wel het spel nog winnen!";
+                            keuzescores[1].model.Score++;
+
+
+                        }
+
+
+
+                        else if (keuzescores[1].model.Keuze == "Steen")
+                        {
+
+                            messageLabel.Text = "Gelijk spel. Probeer opnieuw!";
+
+
+                        }
+
+
+                        else if (keuzescores[1].model.Keuze == "Schaar")
+                        {
+
+                            messageLabel.Text = "Gefiliciflopstaart! Je hebt deze match gewonnen! Doe zo verder.";
+                            keuzescores[0].model.Score++;
+
+
+                        }
+
+
+                        break;
+
+
+
+
+
+
+
+
+
+                    case "Schaar":
+
+                        if (keuzescores[1].model.Keuze == "Blad")
+                        {
+
+                            messageLabel.Text = "Gefiliciflopstaart! Je hebt deze match gewonnen! Doe zo verder.";
+                            keuzescores[0].model.Score++;
+
+
+                        }
+
+
+                        else if (keuzescores[1].model.Keuze == "Steen")
+                        {
+
+                            messageLabel.Text = "Je hebt deze match verloren, maar je kan wel het spel nog winnen!";
+                            keuzescores[1].model.Score++;
+
+
+                        }
+
+                        else if (keuzescores[1].model.Keuze == "Schaar")
+                        {
+
+                            messageLabel.Text = "Gelijk spel. Probeer opnieuw!";
+
+
+                        }
+
+
+                        break;
+
+
+
+
+
+
+
+                    default:
+                        {
+
+                            messageLabel.Text = "Oops er is iets mis gegaan";
+
+                        }
+
+
+                        break;
+
+
+                }
+
+
+
+
+
+                if (keuzescores[0].model.Score == 5 || keuzescores[1].model.Score == 5) {
+
+
+                    if (keuzescores[0].model.Score == 5)
+                    {
+
+                        messageLabel.Text = "Gefiliciflopstaart! Je hebt dit spel gewonnen! Speel opnieuw!";
+
+                    }
+
+
+
+                    else if (keuzescores[1].model.Score == 5)
+                    {
+
+                        messageLabel.Text = "Je hebt dit spel verloren.. Maar je wraak zal zoet zijn, maak de computer in!";
+
+                    }
+
+
+
+                    //gebeurt sowieso als een van de 2 aan 5 punten zit
+                    keuzescores[0].model.Score = 0;
+                    keuzescores[1].model.Score = 0;
+
+
+                }
+
+
+
+
+
+                //om labels te kunnen vullen --> in de view van de KeuzeScores geraken en daar de labels aanspreken
+                KeuzeScoreView viewSpeler = keuzescores[0].getView();
+
+                KeuzeScoreView viewComputer = keuzescores[1].getView();
+
+                viewSpeler.UpdateUI();
+
+                viewComputer.UpdateUI();
+
+
+
+
+            }
 
 
 
 
         }
-
-
-
-
     }
 }
