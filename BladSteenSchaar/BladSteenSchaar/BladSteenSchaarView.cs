@@ -157,6 +157,9 @@ namespace BladSteenSchaar
 
                             messageLabel.Text = "Gelijk spel. Probeer opnieuw!";
 
+                            keuzescores[0].model.Achtergrondkleur = Color.Orange;
+                            keuzescores[1].model.Achtergrondkleur = Color.Orange;
+
 
                         }
 
@@ -166,6 +169,9 @@ namespace BladSteenSchaar
 
                             messageLabel.Text = "Gefiliciflopstaart! Je hebt deze match gewonnen! Doe zo verder.";
                             keuzescores[0].model.Score++;
+
+                            keuzescores[0].model.Achtergrondkleur = Color.Green;
+                            keuzescores[1].model.Achtergrondkleur = Color.Red;
 
 
                         }
@@ -177,6 +183,9 @@ namespace BladSteenSchaar
 
                             messageLabel.Text = "Je hebt deze match verloren, maar je kan wel het spel nog winnen!";
                             keuzescores[1].model.Score++;
+
+                            keuzescores[0].model.Achtergrondkleur = Color.Red;
+                            keuzescores[1].model.Achtergrondkleur = Color.Green;
 
 
                         }
@@ -199,6 +208,9 @@ namespace BladSteenSchaar
                             messageLabel.Text = "Je hebt deze match verloren, maar je kan wel het spel nog winnen!";
                             keuzescores[1].model.Score++;
 
+                            keuzescores[0].model.Achtergrondkleur = Color.Red;
+                            keuzescores[1].model.Achtergrondkleur = Color.Green;
+
 
                         }
 
@@ -209,6 +221,9 @@ namespace BladSteenSchaar
 
                             messageLabel.Text = "Gelijk spel. Probeer opnieuw!";
 
+                            keuzescores[0].model.Achtergrondkleur = Color.Orange;
+                            keuzescores[1].model.Achtergrondkleur = Color.Orange;
+
 
                         }
 
@@ -218,6 +233,9 @@ namespace BladSteenSchaar
 
                             messageLabel.Text = "Gefiliciflopstaart! Je hebt deze match gewonnen! Doe zo verder.";
                             keuzescores[0].model.Score++;
+
+                            keuzescores[0].model.Achtergrondkleur = Color.Green;
+                            keuzescores[1].model.Achtergrondkleur = Color.Red;
 
 
                         }
@@ -241,6 +259,9 @@ namespace BladSteenSchaar
                             messageLabel.Text = "Gefiliciflopstaart! Je hebt deze match gewonnen! Doe zo verder.";
                             keuzescores[0].model.Score++;
 
+                            keuzescores[0].model.Achtergrondkleur = Color.Green;
+                            keuzescores[1].model.Achtergrondkleur = Color.Red;
+
 
                         }
 
@@ -251,6 +272,9 @@ namespace BladSteenSchaar
                             messageLabel.Text = "Je hebt deze match verloren, maar je kan wel het spel nog winnen!";
                             keuzescores[1].model.Score++;
 
+                            keuzescores[0].model.Achtergrondkleur = Color.Red;
+                            keuzescores[1].model.Achtergrondkleur = Color.Green;
+
 
                         }
 
@@ -258,6 +282,9 @@ namespace BladSteenSchaar
                         {
 
                             messageLabel.Text = "Gelijk spel. Probeer opnieuw!";
+
+                            keuzescores[0].model.Achtergrondkleur = Color.Orange;
+                            keuzescores[1].model.Achtergrondkleur = Color.Orange;
 
 
                         }
@@ -275,6 +302,9 @@ namespace BladSteenSchaar
                         {
 
                             messageLabel.Text = "Oops er is iets mis gegaan";
+
+                            keuzescores[0].model.Achtergrondkleur = Color.Empty;
+                            keuzescores[1].model.Achtergrondkleur = Color.Empty;
 
                         }
 
@@ -296,6 +326,9 @@ namespace BladSteenSchaar
 
                         messageLabel.Text = "Gefiliciflopstaart! Je hebt dit spel gewonnen! Speel opnieuw!";
 
+                        keuzescores[0].model.Achtergrondkleur = Color.Green;
+                        keuzescores[1].model.Achtergrondkleur = Color.Empty;
+
                     }
 
 
@@ -304,6 +337,9 @@ namespace BladSteenSchaar
                     {
 
                         messageLabel.Text = "Je hebt dit spel verloren.. Maar je wraak zal zoet zijn, maak de computer in!";
+
+                        keuzescores[0].model.Achtergrondkleur = Color.Empty;
+                        keuzescores[1].model.Achtergrondkleur = Color.Green;
 
                     }
 

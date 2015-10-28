@@ -27,7 +27,6 @@ namespace BladSteenSchaar
         private void KeuzeScoreView_Load(object sender, EventArgs e)
         {
 
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,6 +51,9 @@ namespace BladSteenSchaar
 
             int score = controller.model.Score;
             scoreWaardeLabel.Text = score.ToString();
+
+            Color kleur = controller.model.Achtergrondkleur;
+            keuzeLabel.BackColor = kleur;
 
         }
 

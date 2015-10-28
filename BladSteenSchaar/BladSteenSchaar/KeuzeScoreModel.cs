@@ -12,6 +12,7 @@ namespace BladSteenSchaar
 
         private int score = 0;
         private string keuze;
+        private Color achtergrondkleur;
 
 
         public KeuzeScoreModel()
@@ -49,8 +50,19 @@ namespace BladSteenSchaar
 
 
 
-        
 
+        
+        public Color Achtergrondkleur
+        {
+            get
+            {
+                return achtergrondkleur;
+            }
+            set
+            {
+                achtergrondkleur = value;
+            }
+        }
 
 
 
