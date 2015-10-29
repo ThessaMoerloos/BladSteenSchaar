@@ -18,6 +18,7 @@ namespace BladSteenSchaar
         {
 
             InitializeComponent();
+            this.Text = "Blad steen schaar";
 
         }
 
